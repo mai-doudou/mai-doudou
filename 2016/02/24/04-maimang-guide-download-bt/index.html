@@ -21,7 +21,7 @@
 <meta property="og:image" content="http://7xlk6r.com1.z0.glb.clouddn.com/麦芒bt-请求的操作需要提升.jpg-mm">
 <meta property="og:image" content="http://7xlk6r.com1.z0.glb.clouddn.com/麦芒bt-请求的操作需要提升%20解决办法.jpg-mm">
 <meta property="og:image" content="http://7xlk6r.com1.z0.glb.clouddn.com/麦芒bt-4.jpg-mm">
-<meta property="og:updated_time" content="2016-02-25T07:41:57.317Z">
+<meta property="og:updated_time" content="2016-02-25T07:46:16.230Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Windows 和 Linux 系统连上麦芒网络，不能下载内网BT资源的解决办法">
 <meta name="twitter:description" content="连接上 麦芒网络 之后，我们有时候会发现网速是上去了，可是原先内网的资源却无法访问了，比如下不了 BT 资源了。
@@ -392,7 +392,8 @@
 <p>如果你更改了本机的IP地址，就必须使用 <code>route delete 10.0.0.0</code> 命令删除原先的设置，然后重新运行 <code>route add 10.0.0.0 mask 255.0.0.0 你的电脑设置的IP -p</code> 命令来添加一条新的静态路由表。</p>
 <p>如果你想了解更多，请阅读下面的<strong>命令解释</strong>，以及<strong>route命令的帮助信息</strong>。</p>
 <hr>
-<h4 id="以下内容是命令解释，学有余力的同学请继续阅读。"><a href="#以下内容是命令解释，学有余力的同学请继续阅读。" class="headerlink" title="以下内容是命令解释，学有余力的同学请继续阅读。**"></a>以下内容是命令解释，学有余力的同学请继续阅读。**</h4><h5 id="route-add-10-0-0-0-mask-255-0-0-0-你的电脑设置的IP-p-这条命令的作用是添加一条静态路由表。"><a href="#route-add-10-0-0-0-mask-255-0-0-0-你的电脑设置的IP-p-这条命令的作用是添加一条静态路由表。" class="headerlink" title="route add 10.0.0.0 mask 255.0.0.0 你的电脑设置的IP -p 这条命令的作用是添加一条静态路由表。"></a><code>route add 10.0.0.0 mask 255.0.0.0 你的电脑设置的IP -p</code> 这条命令的作用是<strong>添加一条静态路由表</strong>。</h5><ol>
+<h4 id="以下内容是命令解释，学有余力的同学请继续阅读。"><a href="#以下内容是命令解释，学有余力的同学请继续阅读。" class="headerlink" title="以下内容是命令解释，学有余力的同学请继续阅读。**"></a>以下内容是命令解释，学有余力的同学请继续阅读。**</h4><p><code>route add 10.0.0.0 mask 255.0.0.0 你的电脑设置的IP -p</code> 这条命令的作用是<strong>添加一条静态路由表</strong>。</p>
+<ol>
 <li><p><strong>-p</strong>是为了让添加的静态路由表在<strong>系统重启后依然有效</strong> —— 在命令行窗口中键入 <strong>route</strong> 并回车可以查看帮助文档。</p>
 </li>
 <li><p><code>10.0.0.0</code> 指定网段，<code>mask 255.0.0.0</code>指定子网掩码，两个合在一起就表示<strong> <code>10.*.*.*</code> 的所有地址</strong>；而<code>你的电脑设置的IP</code>就是添加的静态路由表的网关。</p>
@@ -400,7 +401,7 @@
 </ol>
 <p>综上所述，这条命令的目的是使得：凡是本机与<code>10.*.*.*</code>网段的IP收发数据都从<code>你的电脑设置的IP</code>这个网关走，而不走 <a href="http://maidoudou.gitcafe.io/" target="_blank" rel="external">麦芒网络</a> 。</p>
 <p>一般情况下，10开头的IP地址都用于内网，所以也可以总结为这条命令的目的是使得：与内网IP收发的数据走内网网关（也即<code>你的电脑设置的IP</code>）。</p>
-<p>#####　<code>route delete 10.0.0.0</code> 这条命令没什么好说的，你要是好奇，可以在运行 <code>route delete 10.0.0.0</code> 命令的前后，使用 <code>route print</code> 命令查看路由表的变化情况。</p>
+<p><code>route delete 10.0.0.0</code> 这条命令没什么好说的，你要是好奇，可以在运行 <code>route delete 10.0.0.0</code> 命令的前后，使用 <code>route print</code> 命令查看路由表的变化情况。</p>
 <p><strong>Linux 用户请自行使用 <code>man route</code>命令查看帮助文档，不再赘述。</strong></p>
 <hr>
 <p><strong>更新：</strong>Linux 命令我还是简单介绍一下吧，有些童鞋英语不是很好，去网上搜索，能找到一大堆东西，有可能看懵了，其实很简单，就三条命令。</p>
