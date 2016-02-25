@@ -21,7 +21,7 @@
 <meta property="og:image" content="http://7xlk6r.com1.z0.glb.clouddn.com/麦芒bt-请求的操作需要提升.jpg-mm">
 <meta property="og:image" content="http://7xlk6r.com1.z0.glb.clouddn.com/麦芒bt-请求的操作需要提升%20解决办法.jpg-mm">
 <meta property="og:image" content="http://7xlk6r.com1.z0.glb.clouddn.com/麦芒bt-4.jpg-mm">
-<meta property="og:updated_time" content="2016-02-25T07:57:55.135Z">
+<meta property="og:updated_time" content="2016-02-25T07:59:43.642Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Windows 和 Linux 系统连上麦芒网络，不能下载内网BT资源的解决办法">
 <meta name="twitter:description" content="连接上 麦芒网络 之后，我们有时候会发现网速是上去了，可是原先内网的资源却无法访问了，比如下不了 BT 资源了。
@@ -391,7 +391,6 @@
 <p>在 <code>route add 10.0.0.0 mask 255.0.0.0 你的电脑设置的IP -p</code> 这条命令中，<strong>-p</strong>是为了让添加的静态路由表在<strong>系统重启后依然有效</strong>。</p>
 <p>如果你更改了本机的IP地址，就必须使用 <code>route delete 10.0.0.0</code> 命令删除原先的设置，然后重新运行 <code>route add 10.0.0.0 mask 255.0.0.0 你的电脑设置的IP -p</code> 命令来添加一条新的静态路由表。</p>
 <p>如果你想了解更多，请阅读下面的<strong>命令解释</strong>，以及<strong>route命令的帮助信息</strong>。</p>
-<hr>
 <h4 id="以下内容是命令解释，学有余力的同学请继续阅读。"><a href="#以下内容是命令解释，学有余力的同学请继续阅读。" class="headerlink" title="以下内容是命令解释，学有余力的同学请继续阅读。"></a>以下内容是命令解释，学有余力的同学请继续阅读。</h4><ol>
 <li><p><code>route add 10.0.0.0 mask 255.0.0.0 你的电脑设置的IP -p</code> 这条命令的作用是<strong>添加一条静态路由表</strong>。</p>
 <ul>
@@ -407,8 +406,9 @@
 </li>
 <li><p><code>route delete 10.0.0.0</code> 这条命令没什么好说的，你要是好奇，可以在运行 <code>route delete 10.0.0.0</code> 命令的前后，使用 <code>route print</code> 命令查看路由表的变化情况。</p>
 </li>
+<li><p><strong>Linux 用户请自行使用 <code>man route</code>命令查看帮助文档，不再赘述。</strong></p>
+</li>
 </ol>
-<h4 id="Linux-用户请自行使用-man-route命令查看帮助文档，不再赘述。"><a href="#Linux-用户请自行使用-man-route命令查看帮助文档，不再赘述。" class="headerlink" title="Linux 用户请自行使用 man route命令查看帮助文档，不再赘述。"></a>Linux 用户请自行使用 <code>man route</code>命令查看帮助文档，不再赘述。</h4><hr>
 <h5 id="更新："><a href="#更新：" class="headerlink" title="更新："></a>更新：</h5><p>Linux 命令我还是简单介绍一下吧，有些童鞋英语不是很好，去网上搜索，能找到一大堆东西，有可能看懵了，其实很简单，就三条命令。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ route</span><br></pre></td></tr></table></figure>
 <p>打印路由表，你也可以使用 <code>route -n</code>，表示不解析名字，列出速度比 <code>route</code> 命令快一些。</p>
